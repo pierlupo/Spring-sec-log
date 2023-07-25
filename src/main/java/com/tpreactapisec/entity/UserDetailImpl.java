@@ -10,13 +10,13 @@ import java.util.stream.Collectors;
 public class UserDetailImpl implements UserDetails {
 
     private int id;
-    private String userName;
+    private String username;
     private String password;
     private Collection<? extends GrantedAuthority> authorities;
 
-    public  UserDetailImpl(int id, String userName, String password, Collection<? extends GrantedAuthority> authorities) {
+    public  UserDetailImpl(int id, String username, String password, Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
-        this.userName = userName;
+        this.username = username;
         this.password = password;
         this.authorities = authorities;
     }
@@ -44,7 +44,7 @@ public class UserDetailImpl implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return username;
     }
 
     @Override
@@ -71,7 +71,7 @@ public class UserDetailImpl implements UserDetails {
     public String toString() {
         return "UserDetailImpl{" +
                 "id=" + id +
-                ", userName='" + userName + '\'' +
+                ", userName='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", authorities=" + authorities +
                 '}';
